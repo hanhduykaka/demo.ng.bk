@@ -13,7 +13,7 @@ export class ProductService {
 
   getListProduct(): Promise<SanPham[]> {
     return this.http
-      .get("http://dev-er.com/service_api_ban_sach/api_service_sach.php")
+      .get("https://dev-er.com/service_api_ban_sach/api_service_sach.php")
       .toPromise()
       .then(data => data.json() as SanPham[]);
   }
@@ -31,7 +31,7 @@ export class ProductService {
 
 
   getListNguoiDung(): Promise<NguoiDung[]> {
-    const url = "http://dev-er.com/service_api_ban_sach/api_nguoi_dung.php";
+    const url = "https://dev-er.com/service_api_ban_sach/api_nguoi_dung.php";
     const header = new Headers({ "Content-Type": "application/json" });
     const body = JSON.stringify({ token: "1234567890" });
     return this.http

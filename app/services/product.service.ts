@@ -13,7 +13,7 @@ export class ProductService {
 
   getListProduct(): Promise<SanPham[]> {
     return this.http
-      .get("https://dev-er.com/service_api_ban_sach/api_service_sach.php")
+      .get("https://api-ban-sach.herokuapp.com/getSanPham")
       .toPromise()
       .then(data => data.json() as SanPham[]);
   }

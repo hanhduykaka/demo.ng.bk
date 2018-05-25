@@ -31,7 +31,7 @@ export class ProductService {
 
 
   getListNguoiDung(): Promise<NguoiDung[]> {
-    const url = "https://dev-er.com/service_api_ban_sach/api_nguoi_dung.php";
+    const url = "https://api-ban-sach.herokuapp.com/postUserName";
     const header = new Headers({ "Content-Type": "application/json" });
     const body = JSON.stringify({ token: "1234567890" });
     return this.http
